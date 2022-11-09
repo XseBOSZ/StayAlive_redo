@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1997470849}
   - component: {fileID: 98334360}
   - component: {fileID: 1256909803}
+  - component: {fileID: 322635582}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -51,6 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI_list:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -133,6 +135,7 @@ MonoBehaviour:
   ItemBox: {fileID: 3253158686307484107, guid: a5392113fbd1d9f459f267dd15c92be3, type: 3}
   CraftingBox: {fileID: 0}
   CraftBttn: {fileID: 0}
+  OBJTORESET: {fileID: 0}
   BP: {fileID: 0}
 --- !u!114 &1256909803
 MonoBehaviour:
@@ -150,3 +153,21 @@ MonoBehaviour:
   buttonHolder: {fileID: 0}
   button: {fileID: 7467668781178541445, guid: 1f754183cec0e274a8933444ac77aef9, type: 3}
   WeaponHolder: {fileID: 0}
+  DropButton: {fileID: 0}
+  InspectButton: {fileID: 0}
+  CombineButton: {fileID: 0}
+  DeleteButton: {fileID: 0}
+  BP: {fileID: 0}
+--- !u!114 &322635582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5823683829328969864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad80b989750849d4d914e15dfc73ee5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Input: {fileID: 0}

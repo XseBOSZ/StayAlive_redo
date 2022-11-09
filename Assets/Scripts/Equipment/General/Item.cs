@@ -7,7 +7,7 @@ public class Item : ScriptableObject,AFunctions
     public int ID;
     public string Name;
     public string Description;
-    public string NameInResources;
+    public string ResourcesPath;
     public WeaponParams WeaponReference;
     public GameObject ObjectReference;
     public ItemType Itemtype;

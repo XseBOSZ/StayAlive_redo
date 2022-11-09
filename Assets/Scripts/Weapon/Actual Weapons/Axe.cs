@@ -5,6 +5,12 @@ using UnityEngine;
 
 public class Axe : MonoBehaviour, AFunctions
 {
+    public Item CorespondingSO;
+    HoldingManipulator hm;
+    private void Start()
+    {
+        hm = GameObject.FindObjectOfType<HoldingManipulator>();
+    }
     public void Combine()
     {
         Debug.Log("Combine");
@@ -22,6 +28,6 @@ public class Axe : MonoBehaviour, AFunctions
 
     public void Use()
     {
-        Debug.Log("Use");
+        hm.GetComponent<HoldingManipulator>().PutInHand(CorespondingSO.ResourcesPath);
     }
 }
