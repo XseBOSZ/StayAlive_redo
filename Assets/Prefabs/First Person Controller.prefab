@@ -34,10 +34,10 @@ RectTransform:
   m_Father: {fileID: 1329345826}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 531.4865, y: -15}
+  m_SizeDelta: {x: 1062.973, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &257284681
 MonoBehaviour:
@@ -541,10 +541,10 @@ RectTransform:
   m_Father: {fileID: 1329345826}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1121.9866, y: -15}
+  m_SizeDelta: {x: 1072.973, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &994004213
 CanvasRenderer:
@@ -658,7 +658,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1035750284
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1561,7 +1561,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1913266004}
   m_Layer: 0
-  m_Name: WeaponHolder
+  m_Name: HandHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1990,6 +1990,7 @@ GameObject:
   - component: {fileID: 114103969153859672}
   - component: {fileID: 871160817}
   - component: {fileID: 871160818}
+  - component: {fileID: 1824299225}
   m_Layer: 0
   m_Name: First Person Camera
   m_TagString: MainCamera
@@ -2246,6 +2247,19 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
+--- !u!114 &1824299225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593727746557118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bee459e1a1de2d844887d7be9f568ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HandHolder: {fileID: 1913266003}
 --- !u!1 &1773623360729482
 GameObject:
   m_ObjectHideFlags: 0

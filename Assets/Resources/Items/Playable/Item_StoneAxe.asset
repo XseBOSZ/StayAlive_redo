@@ -15,8 +15,8 @@ MonoBehaviour:
   ID: 3
   Name: Stone Axe
   Description: Basic Weapon
-  NameInResources: StoneAxe
+  ResourcesPath: Items/Prefabs/StoneAxe
   WeaponReference: {fileID: 11400000, guid: fa8ca535dd2360943a1f59489436528d, type: 2}
-  ObjectReference: {fileID: 2504512943230527728, guid: 424f157abc2e6924faa6d9e99cc444fd,
+  ObjectReference: {fileID: 2517636483605325274, guid: a8efdb1532859a141870f31c08a54cea,
     type: 3}
   Itemtype: 0

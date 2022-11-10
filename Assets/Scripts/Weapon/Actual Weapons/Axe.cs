@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class Axe : MonoBehaviour, AFunctions
 {
-    public Item CorespondingSO;
+    Camera mainCamera;
     HoldingManipulator hm;
+
+
     private void Start()
     {
-        hm = GameObject.FindObjectOfType<HoldingManipulator>();
+        
     }
     public void Combine()
     {
@@ -26,8 +28,23 @@ public class Axe : MonoBehaviour, AFunctions
         Debug.Log("Inspect");
     }
 
-    public void Use()
+    public void Use(Item RefItem)
     {
-        hm.GetComponent<HoldingManipulator>().PutInHand(CorespondingSO.ResourcesPath);
+        if (hm == null)
+        {
+            hm = GameObject.FindObjectOfType<HoldingManipulator>();
+            if (hm != null)
+            {
+                hm.GetComponent<HoldingManipulator>().PutInHand(RefItem.ResourcesPath);
+            }
+            else
+            {
+                Debug.Log("unable to locate holding manipulator");
+            }
+        }
+        else
+        {
+            hm.GetComponent<HoldingManipulator>().PutInHand(RefItem.ResourcesPath);
+        }
     }
 }

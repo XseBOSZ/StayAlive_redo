@@ -35,14 +35,14 @@ public class ManipulatorItemUI : MonoBehaviour
             var newButton = GameObject.Instantiate(button);
             newButton.transform.SetParent(buttonHolder.transform);
             newButton.GetComponentInChildren<Text>().text = "Equip";
-            newButton.GetComponent<Button>().onClick.AddListener(delegate { SlotInBP.Use(); });
+            newButton.GetComponent<Button>().onClick.AddListener(delegate { SlotInBP.Use(SlotInBP); });
         }
         if (SlotInBP.Itemtype == ItemType.Food)
         {
             var newButton = GameObject.Instantiate(button);
             newButton.transform.SetParent(buttonHolder.transform);
             newButton.GetComponentInChildren<Text>().text = "Eat";
-            newButton.GetComponent<Button>().onClick.AddListener(delegate { SlotInBP.Use(); });
+            newButton.GetComponent<Button>().onClick.AddListener(delegate { SlotInBP.Use(SlotInBP); });
 
         }
         if (SlotInBP.Itemtype == ItemType.Drink)
@@ -50,7 +50,7 @@ public class ManipulatorItemUI : MonoBehaviour
             var newButton = GameObject.Instantiate(button);
             newButton.transform.SetParent(buttonHolder.transform);
             newButton.GetComponentInChildren<Text>().text = "Drink";
-            newButton.GetComponent<Button>().onClick.AddListener(delegate { SlotInBP.Use(); });
+            newButton.GetComponent<Button>().onClick.AddListener(delegate { SlotInBP.Use(SlotInBP); });
 
         }
         if (SlotInBP.Itemtype == ItemType.Component)
@@ -58,7 +58,7 @@ public class ManipulatorItemUI : MonoBehaviour
             var newButton = GameObject.Instantiate(button);
             newButton.transform.SetParent(buttonHolder.transform);
             newButton.GetComponentInChildren<Text>().text = "Use";
-            newButton.GetComponent<Button>().onClick.AddListener(delegate { SlotInBP.Use(); });
+            newButton.GetComponent<Button>().onClick.AddListener(delegate { SlotInBP.Use(SlotInBP); });
 
         }
 

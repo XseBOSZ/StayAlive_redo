@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: 2
   Name: Rock
   Description: Regural Rock
-  NameInResources: Stone
+  ResourcesPath: 
   WeaponReference: {fileID: 0}
   ObjectReference: {fileID: 3297831122086315913, guid: 9e650af804fdafc45a8c15194a97c5d6,
     type: 3}

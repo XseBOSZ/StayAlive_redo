@@ -12,6 +12,8 @@ public class Item : ScriptableObject,AFunctions
     public GameObject ObjectReference;
     public ItemType Itemtype;
 
+    
+
     public void Combine()
     {
         ObjectReference.GetComponent<AFunctions>().Combine();
@@ -27,9 +29,10 @@ public class Item : ScriptableObject,AFunctions
         ObjectReference.GetComponent<AFunctions>().Inspect();
     }
 
-    public void Use()
+    public void Use(Item item)
     {
-        ObjectReference.GetComponent<AFunctions>().Use();
+        Debug.Log("using item");
+        ObjectReference.GetComponent<AFunctions>().Use(item);
     }
 
     //public GameObject Prefab;
