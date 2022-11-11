@@ -27,22 +27,29 @@ public class HotBar : MonoBehaviour
     }
     public void AddToHotbar(BPItem itemToAdd)
     {
-        Debug.Log("engaged Add to hotbar");
+
         for(int i = 0; i < HotBarObject.transform.childCount; i++)
         {
             var slotInfo = HotBarObject.transform.GetChild(i).GetComponent<HotbarSlot>();
-
-            if (slotInfo.itemOnSlot.item == null || slotInfo.itemOnSlot.count == 0)
+            if (slotInfo.itemOnSlot.item != null)
+            {
+                if (slotInfo.itemOnSlot.item.Name == itemToAdd.item.Name)
+                {
+                    Debug.Log("added ammount to existing item ");
+                    slotInfo.itemOnSlot.count += 1;
+                    UpdateHotbar();
+                    break;
+                }
+            }
+            else if (slotInfo.itemOnSlot.item == null)
             {
                 slotInfo.itemOnSlot = itemToAdd;
                 hotbarItems.Add(itemToAdd);
+                Debug.Log("added new item ");
                 UpdateHotbar();
                 break;
-            } else if (slotInfo.itemOnSlot.item == itemToAdd.item) {
-                Debug.Log("item added to hotbar");
-
             }
-            else if (i == HotBarObject.transform.childCount && slotInfo.itemOnSlot.item != null)
+            if (i == HotBarObject.transform.childCount && slotInfo.itemOnSlot.item != null)
             {
                 Debug.Log("hotbar's full");
             }

@@ -118,6 +118,7 @@ MonoBehaviour:
   lookingAt: {fileID: 0}
   lookingAtObj: {fileID: 0}
   BP: {fileID: 0}
+  hotbar: {fileID: 0}
 --- !u!114 &98334360
 MonoBehaviour:
   m_ObjectHideFlags: 0

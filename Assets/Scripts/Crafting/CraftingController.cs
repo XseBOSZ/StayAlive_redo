@@ -114,7 +114,6 @@ public class CraftingController : MonoBehaviour
                         BPItem newitem = new BPItem();
                         newitem.item = recipe.ingridients[i].items;
                         newitem.count = recipe.ingridients[i].count;
-
                         BP.items[x] = newitem;
                     }
                     else
