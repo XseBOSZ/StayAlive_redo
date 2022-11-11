@@ -9,8 +9,11 @@ public class HotbarSlot : MonoBehaviour
     public Image slotImage;
     public string resourcesPath;
     public Sprite SpriteToChange;
+
+    HotBar bar;
     private void Start()
     {
+        bar = GetComponentInParent<HotBar>();
         slotImage = gameObject.GetComponent<Image>();
         resourcesPath = "UI/Equipment/";
         UpdateSprite();
