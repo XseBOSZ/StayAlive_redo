@@ -13,11 +13,12 @@ public class CraftingController : MonoBehaviour
     public GameObject OBJTORESET;
 
     public Backpack BP;
+    HotBar bar;
 
     private void Start()
     {
         BP = GameObject.FindObjectOfType<Backpack>().GetComponent<Backpack>();
-
+        bar = GameObject.FindObjectOfType<HotBar>();
     }
     public void ShowCraftingBox(RecipeCreator recipe)
     {
@@ -130,7 +131,7 @@ public class CraftingController : MonoBehaviour
             BPItem newItem = new BPItem();
             newItem.item = recipe.results[i].items;
             newItem.count = recipe.results[i].count;
-
+            bar.AddToHotbar(newItem);
             BP.items.Add(newItem);
         }
     }

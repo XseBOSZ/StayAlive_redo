@@ -1,0 +1,5 @@
+#Holding items:
+
+1. Make Use() function to depends on item from BP
+	a) BP.item.resourcePatch > Use() - AInteract
+2. do some prefabs to make it looks better (borrow models from the internet)

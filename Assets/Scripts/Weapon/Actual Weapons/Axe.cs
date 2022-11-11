@@ -5,6 +5,14 @@ using UnityEngine;
 
 public class Axe : MonoBehaviour, AFunctions
 {
+    Camera mainCamera;
+    HoldingManipulator hm;
+
+
+    private void Start()
+    {
+        
+    }
     public void Combine()
     {
         Debug.Log("Combine");
@@ -20,8 +28,23 @@ public class Axe : MonoBehaviour, AFunctions
         Debug.Log("Inspect");
     }
 
-    public void Use()
+    public void Use(Item RefItem)
     {
-        Debug.Log("Use");
+        if (hm == null)
+        {
+            hm = GameObject.FindObjectOfType<HoldingManipulator>();
+            if (hm != null)
+            {
+                hm.GetComponent<HoldingManipulator>().PutInHand(RefItem.ResourcesPath);
+            }
+            else
+            {
+                Debug.Log("unable to locate holding manipulator");
+            }
+        }
+        else
+        {
+            hm.GetComponent<HoldingManipulator>().PutInHand(RefItem.ResourcesPath);
+        }
     }
 }

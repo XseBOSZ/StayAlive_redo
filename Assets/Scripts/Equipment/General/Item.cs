@@ -7,10 +7,12 @@ public class Item : ScriptableObject,AFunctions
     public int ID;
     public string Name;
     public string Description;
-    public string NameInResources;
+    public string ResourcesPath;
     public WeaponParams WeaponReference;
     public GameObject ObjectReference;
     public ItemType Itemtype;
+
+    
 
     public void Combine()
     {
@@ -27,9 +29,10 @@ public class Item : ScriptableObject,AFunctions
         ObjectReference.GetComponent<AFunctions>().Inspect();
     }
 
-    public void Use()
+    public void Use(Item item)
     {
-        ObjectReference.GetComponent<AFunctions>().Use();
+        Debug.Log("using item");
+        ObjectReference.GetComponent<AFunctions>().Use(item);
     }
 
     //public GameObject Prefab;

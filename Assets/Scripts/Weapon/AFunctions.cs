@@ -4,7 +4,8 @@ using UnityEngine;
 
 public interface AFunctions
 {
-    void Use();
+
+    void Use(Item item);
     void Drop();
     void Inspect();
     void Combine();
