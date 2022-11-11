@@ -17,7 +17,7 @@ public class HotbarSlot : MonoBehaviour
         
     }
     
-    void UpdateSprite()
+    public void UpdateSprite()
     {
         if (itemOnSlot.item == null || itemOnSlot.count == 0)
         {
@@ -34,7 +34,8 @@ public class HotbarSlot : MonoBehaviour
         }
         else
         {
-
+            LoadResource("Slot_"+itemOnSlot.item.Name);
+            slotImage.sprite = SpriteToChange;
         }
         
     }

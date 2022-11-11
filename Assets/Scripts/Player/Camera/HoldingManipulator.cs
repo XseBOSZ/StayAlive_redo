@@ -7,7 +7,7 @@ public class HoldingManipulator : MonoBehaviour
     public GameObject HandHolder;
     public void PutInHand(string resourcesPath)
     {
-        Debug.Log("loaded resource");
+
         /*var LoadedResource = Resources.Load(resourcesPath);
         Type T = LoadedResource.GetType();*/
         if (Resources.Load(resourcesPath).GetType() == typeof(GameObject))

@@ -7,9 +7,11 @@ public class EQManager : MonoBehaviour
     public Item lookingAt;
     public GameObject lookingAtObj;
     public Backpack BP;
+    public HotBar hotbar;
 
     private void Start()
     {
+        hotbar = GameObject.FindObjectOfType<HotBar>();
         BP = GameObject.FindGameObjectWithTag("Player").GetComponent<Backpack>();
     }
     private void Update()
@@ -48,6 +50,7 @@ public class EQManager : MonoBehaviour
                     itemToadd.item = lookingAt;
                     itemToadd.count = 1;
                     BP.items.Add(itemToadd);
+                    hotbar.AddToHotbar(itemToadd);
                     Destroyobj();
                     break;
                 } 
@@ -59,6 +62,7 @@ public class EQManager : MonoBehaviour
             itemToadd.item = lookingAt;
             itemToadd.count = 1;
             BP.items.Add(itemToadd);
+            hotbar.AddToHotbar(itemToadd);
             Destroyobj();
         }
         
@@ -69,6 +73,6 @@ public class EQManager : MonoBehaviour
        lookingAt = null;
        lookingAtObj = null;
     }
-
+    
 }
 
