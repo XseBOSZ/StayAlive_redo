@@ -1,0 +1,12 @@
+Every scene will have diffrent components but i can point types of scene, for theese we will have same components
+every time, this will provide easy access and flexability for scripts that are "written&forgoten" (i wrote these once to 
+use it everywhere where it's needed without changing anything)
+
+First type of scene is "Playable" - you can using player move aroud and do stuff that are programmed 
+!REMEMBER - if you find a bug. It's not a bug, its unwanted feature ;)!
+1.GameManager(Assets/Prefabs/GameManager.Prefab)
+
+Second type of scene is "Interactable" - in here we have every GUI that is in the game (MainMenu.scene for example)
+these will have following components:
+
+

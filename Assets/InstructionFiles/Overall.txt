@@ -1,0 +1,13 @@
+!IMPORTANT NOTE - This is overall structure that will stick to every object in this project
+
+This folder will contain text files which names coresponds to thier component 
+for example: "Player.txt", "GameManager.txt" that stands for !SCRIPT WITH THE SAME NAME!
+
+For every group of components will be sub folder with every component in group
+i.e: "instructionfiles/terraingeneration/*" that stands for !MECHANICS WRITTEN IN THIS GAME!
+
+There is some Exeptions that have prefixes. Structure for this will look like "Scene_MustContains.txt" where i'll note  
+needed components/objects to provide full functionallity of the game. There is a lot to keep track of so it will be 
+usefull for future content and updates.
+
+

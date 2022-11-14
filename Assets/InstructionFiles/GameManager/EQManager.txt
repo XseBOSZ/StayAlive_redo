@@ -1,0 +1,7 @@
+This is essential script needed to whole EquipmentSystem works. 
+
+It's responsible for picking up objects, adding it to hotbar, adding it to Equipment and destroying object from scene
+to avoid item duplicating.
+
+From variables we dont need to asign anything, "Hotbar" and "BP" are asigned by "FindObjectOfType<T>();" so we can skip having it 
+on the same Object. "Looking At" and "Looking At Obj" are asigned in other scripts. 
