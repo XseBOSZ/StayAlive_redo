@@ -5,7 +5,7 @@ use it everywhere where it's needed without changing anything)
 First type of scene is "Playable" - you can using player move aroud and do stuff that are programmed 
 !REMEMBER - if you find a bug. It's not a bug, its unwanted feature ;)!
 1.GameManager(Assets/Prefabs/GameManager.Prefab)
-
+1.First Person Controller (Assets/Prefab/First Person Controller.prefab)
 Second type of scene is "Interactable" - in here we have every GUI that is in the game (MainMenu.scene for example)
 these will have following components:
 

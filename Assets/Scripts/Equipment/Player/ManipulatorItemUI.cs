@@ -18,7 +18,7 @@ public class ManipulatorItemUI : MonoBehaviour
     
     private void Start()
     {
-        BP = GameObject.FindObjectOfType<Backpack>().GetComponent<Backpack>();
+        BP = GameObject.FindObjectOfType<Backpack>();
         ItemUI.SetActive(false);
     }
 
@@ -86,7 +86,6 @@ public class ManipulatorItemUI : MonoBehaviour
                 if (parent.transform.GetChild(i).tag != "DontClear")
                 {
                     Destroy(parent.transform.GetChild(i).gameObject);
-                    Debug.Log("holder is cliring..");
                 }
             }
         }

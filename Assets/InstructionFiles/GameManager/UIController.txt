@@ -29,7 +29,6 @@ To properly functioning we need to asign following items to following components
 2. Console Content -> Text(FPController>FPCamera>Canvas>ConsoleUI>Panel)
 3. PopUp -> PopUp(Equipment(FPController>FPCamera>Canvas) 
     note: this is not duplicating same variable form UI_list, ihis is used to manipulate the text not the object
-
 4. Item Button -> Button.prefab(Assets>Prefabs)
 5. EQ Content -> Content(FPController>FPCamera>Canvas>Equipment>Panel>Scroll View>Viewport)
 6. Recipe Conetnt -> Conent(FPController>FPCamera>Canvas>Crafting>Scroll View>Viewport)

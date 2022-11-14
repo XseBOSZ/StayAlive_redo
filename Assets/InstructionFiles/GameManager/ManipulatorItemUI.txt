@@ -1,0 +1,13 @@
+This script is a sort of connection between item system and equipment. There is where all buttons created on item click
+gain thier functions like "Use" or "Drop"
+
+The following variables need to be asigned for this script to work:
+1. Item UI -> ItemUI (FPController>FPCamera>Canvas>Equipment>Panel)
+2. Button Holder -> (FPController>FPCamera>Canvas>Equipment>Panel>ItemUI)
+3. Button -> Button(Assets/Prefabs)
+4. Weapon Holder -> Hand Holder (FPController>FPCamera)
+5. Drop Button -> Drop  (FPController>FPCamera>Canvas>Equipment>Panel>ItemUI>ButtonHolder>DontClear)
+6. Inspect Button -> Inspect (FPController>FPCamera>Canvas>Equipment>Panel>ItemUI>ButtonHolder>DontClear)
+7. Combine Button -> Combine  (FPController>FPCamera>Canvas>Equipment>Panel>ItemUI>ButtonHolder>DontClear)
+8. Delete Button -> Delete (FPController>FPCamera>Canvas>Equipment>Panel>ItemUI>ButtonHolder>DontClear)
+9. BP is asigned automaticly via "GameObject.FindObjectOfType<Backpack>();"
