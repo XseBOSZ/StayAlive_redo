@@ -1,27 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu()]
+[CreateAssetMenu(fileName = "NoiseData_",menuName = "Scriptable/Terrain/NoiseData")]
 public class NoiseData : UpdatableData
 {
-
-    //floats
     public float noiseScale;
+    public int octaves;
+    public int seed;
     [Range(0, 1)]
     public float persistance;
     public float lacunarity;
-
-    //ints
-    public int octaves;
-    public int seed;
-
-    //vectors
     public Vector2 offset;
-
-
-    //enums
     public Noise.NormalizeMode normalizedMode;
-
 
     protected override void OnValidate()
     {
@@ -33,6 +23,7 @@ public class NoiseData : UpdatableData
         {
             octaves = 0;
         }
+
         base.OnValidate();
     }
 }

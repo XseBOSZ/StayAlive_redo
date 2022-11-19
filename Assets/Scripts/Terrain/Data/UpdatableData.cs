@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class UpdatableData : ScriptableObject
 {
-    public event System.Action onValuesUpdated;
+    public event System.Action OnValuesUpdatet;
     public bool autoUpdate;
 
     protected virtual void OnValidate()
     {
         if (autoUpdate)
         {
-            notifyOfUpdatedValues();
+            UnityEditor.EditorApplication.update += NotifyOfUpdatedValues;
         }
+        
     }
-    public void notifyOfUpdatedValues()
+
+    public void NotifyOfUpdatedValues()
     {
-        if (onValuesUpdated != null)
+        UnityEditor.EditorApplication.update -= NotifyOfUpdatedValues;
+        if (OnValuesUpdatet != null)
         {
-            onValuesUpdated();
+            OnValuesUpdatet();
         }
     }
 }

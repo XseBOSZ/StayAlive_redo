@@ -3,7 +3,7 @@ gain thier functions like "Use" or "Drop"
 
 The following variables need to be asigned for this script to work:
 1. Item UI -> ItemUI (FPController>FPCamera>Canvas>Equipment>Panel)
-2. Button Holder -> (FPController>FPCamera>Canvas>Equipment>Panel>ItemUI)
+2. Button Holder -> ButtonHolder(FPController>FPCamera>Canvas>Equipment>Panel>ItemUI)
 3. Button -> Button(Assets/Prefabs)
 4. Weapon Holder -> Hand Holder (FPController>FPCamera)
 5. Drop Button -> Drop  (FPController>FPCamera>Canvas>Equipment>Panel>ItemUI>ButtonHolder>DontClear)

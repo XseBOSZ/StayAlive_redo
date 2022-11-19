@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu()]
+[CreateAssetMenu(fileName ="TerrainData_",menuName = "Scriptable/Terrain/TerrainData")]
 public class TerrainData : UpdatableData
 {
-    public float uniformScale = 5f;
     public AnimationCurve meshHightCurve;
     public float meshHeightMultiplier;
     public bool useFalloff;
     public bool useFlatShadeing;
-
+    public float uniformScale = 5f;
 
     public float minHeight
     {
@@ -25,5 +24,4 @@ public class TerrainData : UpdatableData
             return uniformScale * meshHeightMultiplier * meshHightCurve.Evaluate(1);
         }
     }
-
 }
