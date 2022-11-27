@@ -1,0 +1,12 @@
+This script is used to enable/disable cursor visibility and lock/unlock position of it.
+
+Following script have 2 variables:
+1. UIC
+2. Is Locked
+
+we dont need to asign UIC becouse it have "UIC = GetComponent<UIControler>();" so it need to be with UIContoller with on 
+the same GameObject but it have an if statement that checking for asignment so you can place it anywhere and !asign in 
+inspector!. For "Is Locked" we'll do nothing - its just inspecor view of cursor state. Its public becouse every time 
+when i press [ESC] unity automaticly unlocks the cursor so i keep this bool public to check if this script does it thing.
+
+It will do what it's supposed to do in builds of the game - for now it's hanging on object and waiting for build.

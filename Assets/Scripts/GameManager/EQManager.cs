@@ -12,7 +12,7 @@ public class EQManager : MonoBehaviour
     private void Start()
     {
         hotbar = GameObject.FindObjectOfType<HotBar>();
-        BP = GameObject.FindGameObjectWithTag("Player").GetComponent<Backpack>();
+        BP = FindObjectOfType<Backpack>();
     }
     private void Update()
     {

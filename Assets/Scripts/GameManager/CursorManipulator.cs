@@ -8,7 +8,14 @@ public class CursorManipulator : MonoBehaviour
     public bool isLocked = false;
     private void Awake()
     {
-        UIC = GetComponent<UIControler>();
+        if (UIC == null)
+        {
+            UIC = GetComponent<UIControler>();
+        }
+        else
+        {
+            Debug.Log("UIC is already asigned");
+        }
     }
     public void LockCursor()
     {

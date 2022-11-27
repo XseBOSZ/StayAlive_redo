@@ -1,0 +1,3 @@
+Long story short, this is used by CameraRay to know what kind of item we're looking at
+
+i'm need to Redo this but its needed for mechanics like EquipmentSystem

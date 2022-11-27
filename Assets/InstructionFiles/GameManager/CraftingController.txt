@@ -1,0 +1,18 @@
+That script is responsible for almost every element form Crafting mechanic, hold all recipes and manipulate UI for creating
+coresponding buttons, checking if our player have items that are needed for creating item, takes specified ammount of
+specified items from players backpack and give player specified ammount of specified items as a result of crafting.
+
+That's why we need "UIContoller.cs" and "CraftingController.cs" -> UIC have own method called "DrawCraftingUI();".
+In this method we're looping trough all of "UIC.RecipeContent" childs (if there are any) and destroying them from scene.
+This way we wont have duplicated boxex for recipes. After destroying all of childs we "Resources.LoadAll" crafting recipes from 
+(Assets/Items/Recipes) and store them in array. When loading is finished we're creating "foreach(Object obj in recipes)"
+a button with Listener "CraftingController.ShowCraftingBox(recipe);" where 
+"Recipe = Resources.Load("Items/Recipes/" + obj.name) as RecipeCreator;". This is how our RecipeContent have every recipe
+visible on crafting list.
+
+So.. with that being said we'll need to asign these variables:
+1. IngridientsHolderBox -> Ings (FPController>FPCamera>Canvas>Crafting>Holder ForOne>ING holder)
+2. ResultsHolderBox -> Resls (FPController>FPCamera>Canvas>Crafting>Holder ForOne>ResHolder)
+3. ItemBox -> RecipeBox(Assets/Prefabs/RecipeBox.prefab)
+4. CraftingBox -> Holder ForOne(FPController>FPCamera>Canvas>Crafting>)
+5. CraftButton -> button(FPController>FPCamera>Canvas>Crafting>Holder ForOne>ResHolder)

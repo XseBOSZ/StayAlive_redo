@@ -10,7 +10,7 @@ public class CraftingController : MonoBehaviour
     public GameObject ItemBox;
     public GameObject CraftingBox;
     public GameObject CraftBttn;
-    public GameObject OBJTORESET;
+    //public GameObject OBJTORESET;
 
     public Backpack BP;
     HotBar bar;

@@ -1,0 +1,36 @@
+Oh boi, i regret that i'm writing this 2 mhonts after writing this script but i'll do it anyway.
+
+This script is Controller for every UI in the scene. I created this for easy script-level acces for UI elements
+mainly becouse i dont wanna write 4 times one reference for popup, instead this i have "UIController UIC;" reference and
+then i can use "UIC.PopUp.text = "";" to edit popup message.
+
+Following Script have this Variables:
+1. UI_list
+2. Console Content
+3. PopUp
+4. Item Button
+5. EQ Content
+6. Recipe Content
+7. BP
+8. CC
+9. MUI
+
+To properly functioning we need to asign following items to following components:
+!X. Vairiable -> Component (object on scene)!
+
+
+1. UI_list (need to provide size of array)
+     UI_list[0] -> ConsoleUI(FPController>FPCamera>Canvas)
+     UI_list[2] -> Equipment(FPController>FPCamera>Canvas)
+     UI_list[3] -> Popup(FPController>FPCamera>Canvas)
+     UI_list[4] -> Crafting(FPController>FPCamera>Canvas)
+!For every additional UI box we need to have after pressing a button we need to assign it here!
+
+2. Console Content -> Text(FPController>FPCamera>Canvas>ConsoleUI>Panel)
+3. PopUp -> PopUp(Equipment(FPController>FPCamera>Canvas) 
+    note: this is not duplicating same variable form UI_list, ihis is used to manipulate the text not the object
+4. Item Button -> Button.prefab(Assets>Prefabs)
+5. EQ Content -> Content(FPController>FPCamera>Canvas>Equipment>Panel>Scroll View>Viewport)
+6. Recipe Conetnt -> Conent(FPController>FPCamera>Canvas>Crafting>Scroll View>Viewport)
+
+BP,CC,MUI are asigned in Scipt by "FindObjectOfType<T>" so there is no need to asign them in inspector but make sure there are on object

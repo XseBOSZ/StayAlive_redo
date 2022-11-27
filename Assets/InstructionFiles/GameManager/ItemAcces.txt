@@ -1,0 +1,6 @@
+This script is optional - its for debugging that our Items form (Assets/Resources/Items/Scriptable) are read properly
+results will be shown in debug console after pressing F1 in game
+
+there is no need to asign anything but keep in mind:
+this script have private reference to UIController and asign it by "UIC = gameObject.GetComponent<UIControler>();" 
+so it must be on GameManager with UIControler on it
